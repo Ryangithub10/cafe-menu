@@ -1,8 +1,5 @@
 :root {
-  --bg-color: #efc3a4;
-  --accent-color: #666322;
-  --primary-color: #4b1f0e;
-  --secondary-color: #0e0504;
+  --accent-color: #5b6622;
   --thumbnail-height: 45%;
   --section-height: 5rem;
   --gap: 5rem;
@@ -16,7 +13,7 @@
 
 body {
   font-family: Sans-Serif;
-  background: var(--bg-color);
+  background: #efc3a4;
 }
 
 .container {
@@ -30,7 +27,7 @@ footer {
   width: 100%;
   height: var(--section-height);
   display: flex;
-  background: var(--primary-color);
+  background: #4b1f0e;
   align-items: center;
   justify-content: center;
 }
@@ -55,15 +52,16 @@ main {
   border-radius: 4px;
   padding-bottom: 0.5rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-.card figure {
+.card .thumb-container {
   width: 100%;
   height: var(--thumbnail-height);
   position: relative;
 }
 
-.card img {
+.card .thumb {
   height: 100%;
   display: inline-block;
   aspect-ratio: 1/1;
@@ -71,7 +69,7 @@ main {
 
 .card figcaption {
   color: #d3d3d3;
-  background: var(--secondary-color);
+  background: #0e0504;
   font-weight: 300;
   padding-left: 0.7em;
   position: absolute;
