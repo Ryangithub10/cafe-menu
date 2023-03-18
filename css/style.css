@@ -116,6 +116,10 @@ main {
   font-weight: 400;
 }
 
+.heart {
+  color: #f0002a;
+}
+
 /* class/utilities for dom manipulation */
 .translateY-0 {
   transform: translateY(0);
