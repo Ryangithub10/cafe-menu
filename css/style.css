@@ -32,7 +32,7 @@ footer {
   justify-content: center;
 }
 
-header h1 {
+.title {
   transform: translateY(3rem);
   transition: all 0.5s ease;
   opacity: 0;
@@ -106,15 +106,16 @@ main {
   line-height: 1.4em;
 }
 
-footer p {
+.footer-text {
   word-spacing: 0.03em;
 }
 
-footer a {
+.link {
   color: var(--accent-color);
   font-weight: 400;
 }
 
+/* class/utilities for dom manipulation */
 .translateY-0 {
   transform: translateY(0);
 }

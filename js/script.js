@@ -1,4 +1,4 @@
-const title = document.querySelector("header h1");
+const title = document.querySelector(".title");
 const main = document.querySelector("main");
 const cards = document.querySelectorAll(".card");
 
