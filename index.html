@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <link rel="stylesheet" href="css/style.css" />
     <title>Twilight Cafe</title>
   </head>
   <body>
@@ -125,6 +127,42 @@
             </p>
           </article>
         </div>
+        <div class="card">
+          <figure class="thumb-container">
+            <img
+              src="img/coffee.jpg"
+              alt="coffee icon from freepik"
+              class="thumb"
+            />
+            <figcaption>Coffee</figcaption>
+          </figure>
+
+          <article>
+            <p class="price">Rp. 30.000</p>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in,
+              totam et. Porro libero omnis odio. Vitae dignissimos, ipsam quo?
+            </p>
+          </article>
+        </div>
+        <div class="card">
+          <figure class="thumb-container">
+            <img
+              src="img/coffee.jpg"
+              alt="coffee icon from freepik"
+              class="thumb"
+            />
+            <figcaption>Coffee</figcaption>
+          </figure>
+
+          <article>
+            <p class="price">Rp. 30.000</p>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in,
+              totam et. Porro libero omnis odio. Vitae dignissimos, ipsam quo?
+            </p>
+          </article>
+        </div>
       </main>
 
       <footer>
@@ -137,6 +175,14 @@
       </footer>
 
       <script src="js/script.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          offset: 280,
+          duration: 500,
+          once: true,
+        });
+      </script>
     </div>
   </body>
 </html>
