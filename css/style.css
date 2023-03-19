@@ -79,7 +79,7 @@ main {
   object-position: 0 -0.8rem;
 }
 
-.card figcaption {
+.card .coffee-name {
   color: #d3d3d3;
   background: #0e0504;
   font-weight: 300;
