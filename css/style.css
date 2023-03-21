@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: Sans-Serif;
+  font-family: "Poppins", "Barlow", Sans-Serif;
   background: #efc3a4;
 }
 
@@ -36,6 +36,8 @@ footer {
   transform: translateY(3rem);
   transition: all 0.5s ease;
   opacity: 0;
+  font-family: "Lobster", "Pacifico", cursive;
+  font-size: 2.8rem;
 }
 
 main {
@@ -98,13 +100,14 @@ main {
 }
 
 .card .price {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--accent-color);
   margin: 0.2em 0;
 }
 
 .card .desc {
   line-height: 1.4em;
+  font-weight: 300;
 }
 
 .footer-text {
@@ -113,7 +116,7 @@ main {
 
 .link {
   color: var(--accent-color);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .heart {
