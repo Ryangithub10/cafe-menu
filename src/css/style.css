@@ -68,20 +68,20 @@ main {
   opacity: 0;
 }
 
-.card .thumb-container {
+.thumb-container {
   width: 100%;
   height: var(--thumbnail-height);
   position: relative;
   overflow: hidden;
 }
 
-.card .thumb {
+.thumb {
   width: 100%;
   display: inline-block;
   object-position: 0 -0.8rem;
 }
 
-.card .coffee-name {
+.coffee-name {
   color: #d3d3d3;
   background: #0e0504;
   font-weight: 300;
@@ -92,20 +92,20 @@ main {
   left: 0;
 }
 
-.card article {
+.card-body {
   text-align: justify;
   margin: 0 0.5rem;
   overflow: hidden;
   height: calc(100% - var(--thumbnail-height));
 }
 
-.card .price {
+.price {
   font-size: 1.05rem;
   color: var(--accent-color);
   margin: 0.2em 0;
 }
 
-.card .desc {
+.card-desc {
   line-height: 1.4em;
   font-weight: 300;
 }
