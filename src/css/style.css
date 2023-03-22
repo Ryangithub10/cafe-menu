@@ -1,0 +1,133 @@
+:root {
+  --accent-color: #5b6622;
+  --thumbnail-height: 45%;
+  --section-height: 5rem;
+  --gap: 5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Barlow", Sans-Serif;
+  background: #efc3a4;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+header,
+footer {
+  width: 100%;
+  height: var(--section-height);
+  display: flex;
+  background: #4b1f0e;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  transform: translateY(3rem);
+  transition: all 0.5s ease;
+  opacity: 0;
+  font-family: "Lobster", "Pacifico", cursive;
+  font-size: 2.8rem;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  justify-items: center;
+  row-gap: var(--gap);
+  margin: calc(var(--gap) - 1rem) 0;
+}
+
+.card {
+  width: 10rem;
+  height: 15rem;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 4px;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card:nth-child(-n + 4) {
+  transform: translateY(3rem);
+  opacity: 0;
+}
+
+.thumb-container {
+  width: 100%;
+  height: var(--thumbnail-height);
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb {
+  width: 100%;
+  display: inline-block;
+  object-position: 0 -0.8rem;
+}
+
+.coffee-name {
+  color: #d3d3d3;
+  background: #0e0504;
+  font-weight: 300;
+  padding-left: 0.7em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.card-body {
+  text-align: justify;
+  margin: 0 0.5rem;
+  overflow: hidden;
+  height: calc(100% - var(--thumbnail-height));
+}
+
+.price {
+  font-size: 1.05rem;
+  color: var(--accent-color);
+  margin: 0.2em 0;
+}
+
+.card-desc {
+  line-height: 1.4em;
+  font-weight: 300;
+}
+
+.footer-text {
+  word-spacing: 0.03em;
+}
+
+.link {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.heart {
+  color: #f0002a;
+}
+
+/* class/utilities for dom manipulation */
+.translateY-0 {
+  transform: translateY(0);
+}
+
+.opacity-1 {
+  opacity: 1;
+}
