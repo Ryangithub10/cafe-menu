@@ -3,26 +3,27 @@ const main = document.querySelector("main");
 const cards = document.querySelectorAll(".card");
 
 const timeSleep = (ms) => new Promise((res) => setTimeout(res, ms));
-const addClass = (element, cls) => element.classList.add(cls);
+const addClass = (element, ...clss) =>
+  clss.forEach((cls) => element.classList.add(cls));
 const setAttribute = (element, atr, atrValue) =>
   element.setAttribute(atr, atrValue);
+const style = (element, styles) =>
+  styles.forEach((prop) => (element.style[prop[0]] = prop[1]));
 
 window.onload = async () => {
-  addClass(title, "translateY-0");
-  addClass(title, "opacity-1");
+  addClass(title, "translateY-0", "opacity-1");
 
   await timeSleep(450);
   for (let i = 0; i < 4; i++) {
-    cards[i].style.transition = `all 0.5s ${(i + 1) * 0.12}s ease`;
-    cards[i].style.transform = "translateY(0)";
-    cards[i].style.opacity = 1;
+    style(cards[i], [
+      ["transition", `all 0.5s ${(i + 1) * 0.12}s ease`],
+      ["transform", "translateY(0)"],
+      ["opacity", 1],
+    ]);
   }
 };
 
 for (let i = 4; i < cards.length; i++) {
   setAttribute(cards[i], "data-aos", "fade-up");
-
-  if (i % 2 !== 0) {
-    setAttribute(cards[i], "data-aos-delay", 200);
-  }
+  if (i % 2 !== 0) setAttribute(cards[i], "data-aos-delay", 200);
 }
