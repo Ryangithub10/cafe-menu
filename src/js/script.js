@@ -1,5 +1,4 @@
 const title = document.querySelector(".title");
-const main = document.querySelector("main");
 const cards = document.querySelectorAll(".card");
 
 const timeSleep = (ms) => new Promise((res) => setTimeout(res, ms));
