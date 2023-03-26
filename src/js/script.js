@@ -9,8 +9,7 @@ const addClass = (element, ...clss) =>
   clss.forEach((cls) => element.classList.add(cls));
 const setAttribute = (element, atr, atrValue) =>
   element.setAttribute(atr, atrValue);
-const style = (element, styles) =>
-  styles.forEach((prop) => (element.style[prop[0]] = prop[1]));
+const style = (element, styles) => { for (const prop in styles) element.style[prop] = styles[prop] };
 
 // multiline function
 const getData = async (url) => {
@@ -54,10 +53,10 @@ window.onload = async () => {
 
   await timeSleep(50);
   for (let i = 0; i < 4; i++) {
-    style(cards[i], [
-      ["transition", `all 0.5s ${(i + 1) * 0.12}s ease`],
-      ["transform", "translateY(0)"],
-      ["opacity", 1],
-    ]);
+    style(cards[i], {
+      transition: `all 0.5s ${(i + 1) * 0.12}s ease`,
+      transform: "translateY(0)",
+      opacity: 1,
+    });
   }
 };
