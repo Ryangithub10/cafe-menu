@@ -18,7 +18,7 @@ body {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -30,6 +30,11 @@ footer {
   background: #4b1f0e;
   align-items: center;
   justify-content: center;
+}
+
+header {
+  position: absolute;
+  top: 0;
 }
 
 .title {
@@ -49,7 +54,7 @@ main {
   justify-content: space-between;
   justify-items: center;
   row-gap: var(--gap);
-  margin: calc(var(--gap) - 1rem) 0;
+  padding: calc(var(--gap) * 2) 0;
 }
 
 .card {
@@ -109,6 +114,11 @@ main {
 .card-desc {
   line-height: 1.4em;
   font-weight: 300;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-text {

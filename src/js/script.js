@@ -21,8 +21,7 @@ const getData = async (url) => {
 };
 
 const createCard = ({ title, description, image }) => {
-  return `
-    <div class="card">
+  return `<div class="card">
       <figure class="thumb-container">
         <img
           src="${image}"
@@ -38,30 +37,27 @@ const createCard = ({ title, description, image }) => {
           ${description}
         </p>
       </article>
-    </div>
-  `;
+    </div>`;
 };
 
 // manipulation html
 window.onload = async () => {
-  const hotCoffees = await getData("https://api.sampleapis.com/coffee/hot");
-  const coldCoffees = await getData("https://api.sampleapis.com/coffee/iced");
-  hotCoffees.forEach((coffee) => (main.innerHTML += createCard(coffee)));
-  coldCoffees.forEach((coffee) => (main.innerHTML += createCard(coffee)));
-  const cards = document.querySelectorAll(".card")
+  const coffees = await getData("https://api.sampleapis.com/coffee/hot");
+  coffees.forEach((coffee) => (main.innerHTML += createCard(coffee)));
+  const cards = main.childNodes;
 
   addClass(title, "translateY-0", "opacity-1");
-  for (const [i, card] of cards.entries()) {
-    if (i < 4) {
-      style(card, [
-        ["transition", `all 0.5s ${(i + 1) * 0.12}s ease`],
-        ["transform", "translateY(0)"],
-        ["opacity", 1],
-      ]);
-      continue;
-    }
+  for (let i = 4; i < cards.length; i++) {
+    setAttribute(cards[i], "data-aos", "fade-up");
+    if (i % 2 !== 0) setAttribute(cards[i], "data-aos-delay", 200);
+  }
 
-    setAttribute(card, "data-aos", "fade-up");
-    if (i % 2 !== 0) setAttribute(card, "data-aos-delay", 200);
+  await timeSleep(50);
+  for (let i = 0; i < 4; i++) {
+    style(cards[i], [
+      ["transition", `all 0.5s ${(i + 1) * 0.12}s ease`],
+      ["transform", "translateY(0)"],
+      ["opacity", 1],
+    ]);
   }
 };
